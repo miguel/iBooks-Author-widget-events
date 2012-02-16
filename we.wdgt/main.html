@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <style type="text/css"> 
+    body { 
+    	color: gray;
+    	background-color: #333333;
+    }
+    p {
+    	font-size: 30px; 
+    	font-family: Verdana, Tahoma, Helvetica, Arial;
+     	text-align: center; 
+    }
+	a {
+     	color:grey;
+    }
+    </style>
+    <base target='_blank'/> 
+    <script type="text/javascript">
+          
+          var starts=1;
+          var exists=0;
+          
+           function update() {
+          	document.getElementById('open').innerHTML = 'Starts = '+starts;
+          	document.getElementById('closed').innerHTML = 'Exists = '+exists;
+          };
+                   
+          widget.pauseAudioVisual = function() {
+          	exists++;
+          	update();
+          };
+    
+          widget.didEnterWidgetMode = function(x) {
+          	starts++;
+          	update();
+          };
+          
+    </script>
+</head>
+
+<body onload="update()">
+    <div class="container">
+        <p id="open"></p>
+        <p id="closed"></p>
+        <p><a href="http://www.ibooksauthor.es" >iBooksAuthor.es</a></p>
+   </div> 
+       
+</body>
+</html>
+
